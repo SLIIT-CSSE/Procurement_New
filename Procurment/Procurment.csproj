@@ -196,9 +196,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DashboardUIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+
     <Compile Include="Controllers\PaymentController.cs" />
+
+    <Compile Include="Controllers\ViewOrdersController.cs" />
+
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +219,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\hideMenu.css" />
+    <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -272,10 +278,25 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+
     <Content Include="Views\Payment\SuccessfullPayments.cshtml" />
+
+    <Content Include="Views\DashboardUI\SiteMgr.cshtml" />
+    <Content Include="Views\ViewOrders\ViewOrder.cshtml" />
+    <Content Include="Views\ViewOrders\ConsearchOrder.cshtml" />
+    <Content Include="Views\ViewOrders\OrderStatus.cshtml" />
+    <Content Include="Views\ViewOrders\ApprovedOrder.cshtml" />
+    <Content Include="Views\ViewOrders\RejectedOrder.cshtml" />
+    <Content Include="Views\ViewOrders\PendingOrder.cshtml" />
+    <Content Include="Views\ViewOrders\SupPreviousorder.cshtml" />
+    <Content Include="Views\ViewOrders\SupplierOrder.cshtml" />
+    <Content Include="Views\ViewOrders\SupRejectedorder.cshtml" />
+    <Content Include="Views\ViewOrders\SupPendingorder.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ConSearch\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
