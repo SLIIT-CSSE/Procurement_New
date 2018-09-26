@@ -20,6 +20,13 @@ namespace Procurment.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<ConstructionItem> ConstructionItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<User> user { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<SupplierStatus> SupplierStatus { get; set; }
+        public DbSet<Company_Staff_Status> Staff_Status { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
