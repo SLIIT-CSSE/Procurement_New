@@ -198,11 +198,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-
     <Compile Include="Controllers\AddOrderController.cs" />
-
     <Compile Include="Controllers\DashboardController.cs" />
-
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ViewOrdersController.cs" />
@@ -236,6 +233,14 @@
     <Compile Include="Migrations\201809261116290_OrderItem.cs" />
     <Compile Include="Migrations\201809261116290_OrderItem.Designer.cs">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809270824286_addAutoIncrement.cs" />
+    <Compile Include="Migrations\201809270824286_addAutoIncrement.Designer.cs">
+      <DependentUpon>201809270824286_addAutoIncrement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809270914080_Construction.cs" />
+    <Compile Include="Migrations\201809270914080_Construction.Designer.cs">
+      <DependentUpon>201809270914080_Construction.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -318,11 +323,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-
-
     <Content Include="Views\AddOrder\AddMyOrder.cshtml" />
     <Content Include="Views\AddOrder\AddNewItem.cshtml" />
-
     <Content Include="Views\Dashboard\SiteManager.cshtml" />
     <Content Include="Views\ViewOrders\ApprovedOrder.cshtml" />
     <Content Include="Views\ViewOrders\ConsearchOrder.cshtml" />
@@ -365,6 +367,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809261116290_OrderItem.resx">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809270824286_addAutoIncrement.resx">
+      <DependentUpon>201809270824286_addAutoIncrement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809270914080_Construction.resx">
+      <DependentUpon>201809270914080_Construction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
