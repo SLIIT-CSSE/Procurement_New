@@ -1,14 +1,19 @@
 ﻿using Procurment.Models;
 using System.Data.Entity;
 using System.Web.Mvc;
-
+using System.Collections.Generic;
 
 
 namespace Procurment.Controllers
 {
     public class AddOrderController : Controller
     {
-        private ApplicationDbContext _context = new ApplicationDbContext() { };
+        private ApplicationDbContext _context; 
+
+        public AddOrderController()
+        {
+            _context = new ApplicationDbContext();
+        }
 
         // GET: AddOrder
         public ActionResult AddMyOrder()
