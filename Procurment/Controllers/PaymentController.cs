@@ -13,5 +13,31 @@ namespace Procurment.Controllers
         {
             return View();
         }
+
+        public ActionResult SuccessfullPaymentList()
+        {
+            return View();
+        }
+        
+        public ActionResult PendingPayment()
+        {
+            return View();
+        }
+
+        public ActionResult PendingPaymentList()
+        {
+            return View();
+        }
+
+        public ActionResult ManagerApprovedList()
+        {
+            return View();
+        }
+
+        public ActionResult ManagerApprovedItem()
+        {
+            return View();
+        }
+
     }
 }

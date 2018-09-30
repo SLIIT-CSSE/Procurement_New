@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "PendingPaymentList";
+}
+
+<body>
+    <br /><br />
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8" center>
+            <div class="container text-center">
+                <button class="btn btn-info btn-active" href="#">Pending Payments</button>
+                <button class="btn btn-light" href="#">Successful Payments</button>
+                <button class="btn btn-light" href="#">Manager Approval</button>
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+
+
+    <div class="col-sm-2">
+    </div>
+    <div class="jumbotron col-sm-8">
+        <h3><font color="green"><strong>Pending Payments List</strong></font></h3>
+        <div class="row">
+            <table>
+                <tr>
+                    <th class="th1">Order Id</th>
+                    <th class="th1">Date</th>
+                    <th class="th1">Amount</th>
+                    <th class="th1">Action</th>
+                </tr>
+                <tr>
+                    <td>O0014</td>
+                    <td>8/02/2018</td>
+                    <td>125000000</td>
+                    <td>
+                        <a class="input-group-btn btn btn-success go inline">View</a>
+                        <a class="input-group-btn btn btn-danger go inline">Pay Now</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>O0015</td>
+                    <td>9/02/2018</td>
+                    <td>115000000</td>
+                    <td>
+                        <a class="input-group-btn btn btn-success go inline">View</a>
+                        <a class="input-group-btn btn btn-danger go inline">Pay Now</a>
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+        </div>
+
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <style>
+        table {
+            background-color: lightblue;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 6px;
+        }
+
+        .th1{
+            background-color:#ffcc66;
+        }
+    </style>
+
+</body>
+
