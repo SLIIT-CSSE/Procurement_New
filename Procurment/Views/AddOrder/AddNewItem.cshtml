@@ -1,0 +1,55 @@
+﻿@model Procurment.Models.ConstructionItem
+@{
+    ViewBag.Title = "AddNewItem";
+}
+
+<br /><br /><br />
+<div class="jumbotron col-md-4 text-center">
+    <h2>Add New Item</h2>
+    <br />
+
+    @using (Html.BeginForm("create", "AddOrder"))
+    {
+        <div class="form-group">
+            
+            @Html.Label("Item Id", new { style = "color:#ff0000" })
+
+
+            @Html.TextBoxFor(Model => Model.ItemId, new { @class = "form-control", @placeholder = "Item Id" })
+        </div>
+        
+        <div class="form-group">
+            <label>Item Name</label>
+            @Html.TextBoxFor(Model => Model.ItemName, new { @class = "form-control", @placeholder = "Item Name" })
+        </div>
+        
+        <div class="form-group">
+            <label>Item Category</label>
+            @Html.TextBoxFor(Model => Model.Category, new { @class = "form-control", @placeholder = "Item Category" })
+        </div>
+        
+        <div class="form-group">
+            <label>Price</label>
+            @Html.TextBoxFor(Model => Model.Price, new { @class = "form-control", @placeholder = "Item Price" })<br />
+        </div>
+
+        <div class="checkbox">
+            <label>
+                @Html.CheckBoxFor(Model => Model.IsRestricted) Restricted Item<br />
+            </label>
+           
+        </div>
+        
+
+        <p><input type="submit" value="Submit" class="btn btn-primary" /></p>
+
+    }
+
+    
+
+</div>
+
+
+
+
+
