@@ -13,5 +13,10 @@ namespace Procurment.Controllers
         {
             return View();
         }
+
+        public ActionResult Supplier()
+        {
+            return View();
+        }
     }
 }
