@@ -429,6 +429,10 @@
     <Content Include="Views\ViewOrders\SupPreviousorder.cshtml" />
     <Content Include="Views\ViewOrders\SupRejectedorder.cshtml" />
     <Content Include="Views\ViewOrders\ViewOrder.cshtml" />
+
+
+    <Content Include="Views\Dashboard\Supplier.cshtml" />
+
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
