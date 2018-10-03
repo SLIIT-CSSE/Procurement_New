@@ -16,7 +16,9 @@ namespace Procurment.Models
         public float TotalAmount { get; set; }
         public float SiteManagerId { get; set; }
 
+        public DateTime Date { get; set; }
 
+       
 
     }
 }

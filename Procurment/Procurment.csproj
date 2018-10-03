@@ -233,6 +233,14 @@
     <Compile Include="Migrations\201809261116290_OrderItem.Designer.cs">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810030733375_adddatevariable.cs" />
+    <Compile Include="Migrations\201810030733375_adddatevariable.Designer.cs">
+      <DependentUpon>201810030733375_adddatevariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030801408_addordersfk.cs" />
+    <Compile Include="Migrations\201810030801408_addordersfk.Designer.cs">
+      <DependentUpon>201810030801408_addordersfk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Company_Staff_Status.cs" />
@@ -439,6 +447,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809261116290_OrderItem.resx">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030733375_adddatevariable.resx">
+      <DependentUpon>201810030733375_adddatevariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030801408_addordersfk.resx">
+      <DependentUpon>201810030801408_addordersfk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -8,10 +8,13 @@ namespace Procurment.Models
 {
     public class OrderItem
     {
-        [Key]
+      
+           [Key]
         public string OrderItemId { get; set; }
+        public ConstructionItem ConstructionItem { get;set;}
+        public string ConstructionItemId { get; set; }
+        public Order Order { get; set; }
         public string OrderId { get; set; }
-        public string ItemId { get; set; }
         public int quantity { get; set; }
 
     }
