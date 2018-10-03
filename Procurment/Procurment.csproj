@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -143,12 +151,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -233,6 +235,7 @@
     <Compile Include="Migrations\201809261116290_OrderItem.Designer.cs">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Migrations\201810030733375_adddatevariable.cs" />
     <Compile Include="Migrations\201810030733375_adddatevariable.Designer.cs">
       <DependentUpon>201810030733375_adddatevariable.cs</DependentUpon>
@@ -255,8 +258,52 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+
+    <Compile Include="Migrations\201809270824286_addAutoIncrement.cs" />
+    <Compile Include="Migrations\201809270824286_addAutoIncrement.Designer.cs">
+      <DependentUpon>201809270824286_addAutoIncrement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809270914080_Construction.cs" />
+    <Compile Include="Migrations\201809270914080_Construction.Designer.cs">
+      <DependentUpon>201809270914080_Construction.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="Migrations\201810030612300_AddCategory.cs" />
+    <Compile Include="Migrations\201810030612300_AddCategory.Designer.cs">
+      <DependentUpon>201810030612300_AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030619550_AddCategoryType.cs" />
+    <Compile Include="Migrations\201810030619550_AddCategoryType.Designer.cs">
+      <DependentUpon>201810030619550_AddCategoryType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030627309_PopulateCategoryTypes.cs" />
+    <Compile Include="Migrations\201810030627309_PopulateCategoryTypes.Designer.cs">
+      <DependentUpon>201810030627309_PopulateCategoryTypes.cs</DependentUpon>
+
+    <Compile Include="Migrations\201810021227580_Date_Attribute_added_to_order.cs" />
+    <Compile Include="Migrations\201810021227580_Date_Attribute_added_to_order.Designer.cs">
+      <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
+
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company_Staff_Status.cs" />
+    <Compile Include="Models\ConstructionItem.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\SupplierStatus.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Antlr3.Runtime.dll" />
@@ -333,6 +380,11 @@
     <Content Include="bin\System.Web.WebPages.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
+    <Content Include="App_Data\aspnet-Procurment-20180924054910.mdf" />
+    <Content Include="App_Data\aspnet-Procurment-20180924054910_log.ldf">
+      <DependentUpon>aspnet-Procurment-20180924054910.mdf</DependentUpon>
+    </Content>
+
     <Content Include="Content\bootstrap-for-mvc.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -400,6 +452,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+
+    <Content Include="Views\Payment\SuccessfullPayment.cshtml" />
+    <Content Include="Views\Payment\PendingPayment.cshtml" />
+    <Content Include="Views\Payment\ManagerApprovedList.cshtml" />
+    <Content Include="Views\Payment\ManagerApprovedItem.cshtml" />
+    <Content Include="Views\Payment\PendingPaymentList.cshtml" />
+    <Content Include="Views\Payment\SuccessfullPaymentList.cshtml" />
+    <Content Include="Views\AddOrder\AddMyOrder.cshtml" />
+    <Content Include="Views\AddOrder\AddNewItem.cshtml" />
+
     <Content Include="Views\Dashboard\SiteManager.cshtml" />
     <Content Include="Views\ViewOrders\ApprovedOrder.cshtml" />
     <Content Include="Views\ViewOrders\ConsearchOrder.cshtml" />
@@ -411,13 +473,18 @@
     <Content Include="Views\ViewOrders\SupPreviousorder.cshtml" />
     <Content Include="Views\ViewOrders\SupRejectedorder.cshtml" />
     <Content Include="Views\ViewOrders\ViewOrder.cshtml" />
+
     <Content Include="Views\AddOrder\AddMyOrder.cshtml" />
     <Content Include="Views\AddOrder\AddNewItem.cshtml" />
     <Content Include="Views\Payment\SuccessfullPayment.cshtml" />
+
+
+
+    <Content Include="Views\Dashboard\Supplier.cshtml" />
+
+
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -448,11 +515,33 @@
     <EmbeddedResource Include="Migrations\201809261116290_OrderItem.resx">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Migrations\201810030733375_adddatevariable.resx">
       <DependentUpon>201810030733375_adddatevariable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810030801408_addordersfk.resx">
       <DependentUpon>201810030801408_addordersfk.cs</DependentUpon>
+
+    <EmbeddedResource Include="Migrations\201809270824286_addAutoIncrement.resx">
+      <DependentUpon>201809270824286_addAutoIncrement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809270914080_Construction.resx">
+      <DependentUpon>201809270914080_Construction.cs</DependentUpon>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Migrations\201810030612300_AddCategory.resx">
+      <DependentUpon>201810030612300_AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030619550_AddCategoryType.resx">
+      <DependentUpon>201810030619550_AddCategoryType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030627309_PopulateCategoryTypes.resx">
+      <DependentUpon>201810030627309_PopulateCategoryTypes.cs</DependentUpon>
+
+    <EmbeddedResource Include="Migrations\201810021227580_Date_Attribute_added_to_order.resx">
+      <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
+
+
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

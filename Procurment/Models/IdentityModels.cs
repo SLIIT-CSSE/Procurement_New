@@ -27,6 +27,7 @@ namespace Procurment.Models
         public DbSet<Payment> Payments { get; set; }
         public DbSet<SupplierStatus> SupplierStatus { get; set; }
         public DbSet<Company_Staff_Status> Staff_Status { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
