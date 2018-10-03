@@ -1,4 +1,7 @@
-﻿@model Procurment.Models.ConstructionItem
+﻿@model Procurment.ViewModels.NewItemViewModel
+
+
+
 @{
     ViewBag.Title = "AddNewItem";
 }
@@ -15,27 +18,27 @@
             @Html.Label("Item Id", new { style = "color:#ff0000" })
 
 
-            @Html.TextBoxFor(Model => Model.ItemId, new { @class = "form-control", @placeholder = "Item Id" })
+            @Html.TextBoxFor(Model => Model.ConstructionItem.ItemId, new { @class = "form-control", @placeholder = "Item Id" })
         </div>
         
         <div class="form-group">
             <label>Item Name</label>
-            @Html.TextBoxFor(Model => Model.ItemName, new { @class = "form-control", @placeholder = "Item Name" })
+            @Html.TextBoxFor(Model => Model.ConstructionItem.ItemName, new { @class = "form-control", @placeholder = "Item Name" })
         </div>
         
         <div class="form-group">
             <label>Item Category</label>
-            @Html.TextBoxFor(Model => Model.Category, new { @class = "form-control", @placeholder = "Item Category" })
+            @Html.DropDownListFor(Model => Model.ConstructionItem.CategoryId,new SelectList(Model.Categories, "CategoryId", "CategoryName"),"Select Category", new { @class = "form-control", @placeholder = "Item Category" })
         </div>
         
         <div class="form-group">
             <label>Price</label>
-            @Html.TextBoxFor(Model => Model.Price, new { @class = "form-control", @placeholder = "Item Price" })<br />
+            @Html.TextBoxFor(Model => Model.ConstructionItem.Price, new { @class = "form-control", @placeholder = "Item Price" })<br />
         </div>
 
         <div class="checkbox">
             <label>
-                @Html.CheckBoxFor(Model => Model.IsRestricted) Restricted Item<br />
+                @Html.CheckBoxFor(Model =>Model.ConstructionItem.IsRestricted) Restricted Item<br />
             </label>
            
         </div>
@@ -47,6 +50,9 @@
 
     
 
+</div>
+
+<div class="col-md-4">
 </div>
 
 

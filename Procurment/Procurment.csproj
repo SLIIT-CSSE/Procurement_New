@@ -243,12 +243,27 @@
     <Compile Include="Migrations\201809270914080_Construction.Designer.cs">
       <DependentUpon>201809270914080_Construction.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Migrations\201810030612300_AddCategory.cs" />
+    <Compile Include="Migrations\201810030612300_AddCategory.Designer.cs">
+      <DependentUpon>201810030612300_AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030619550_AddCategoryType.cs" />
+    <Compile Include="Migrations\201810030619550_AddCategoryType.Designer.cs">
+      <DependentUpon>201810030619550_AddCategoryType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030627309_PopulateCategoryTypes.cs" />
+    <Compile Include="Migrations\201810030627309_PopulateCategoryTypes.Designer.cs">
+      <DependentUpon>201810030627309_PopulateCategoryTypes.cs</DependentUpon>
+
     <Compile Include="Migrations\201810021227580_Date_Attribute_added_to_order.cs" />
     <Compile Include="Migrations\201810021227580_Date_Attribute_added_to_order.Designer.cs">
       <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Company_Staff_Status.cs" />
     <Compile Include="Models\ConstructionItem.cs" />
     <Compile Include="Models\Payment.cs" />
@@ -263,6 +278,7 @@
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Antlr3.Runtime.dll" />
@@ -471,8 +487,19 @@
     <EmbeddedResource Include="Migrations\201809270914080_Construction.resx">
       <DependentUpon>201809270914080_Construction.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Migrations\201810030612300_AddCategory.resx">
+      <DependentUpon>201810030612300_AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030619550_AddCategoryType.resx">
+      <DependentUpon>201810030619550_AddCategoryType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030627309_PopulateCategoryTypes.resx">
+      <DependentUpon>201810030627309_PopulateCategoryTypes.cs</DependentUpon>
+
     <EmbeddedResource Include="Migrations\201810021227580_Date_Attribute_added_to_order.resx">
       <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
