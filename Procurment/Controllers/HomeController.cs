@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Procurment.Models;
 
 namespace Procurment.Controllers
 {
@@ -10,8 +11,13 @@ namespace Procurment.Controllers
     {
         public ActionResult Index()
         {
+            if(Session["user"] == null)
+            {
+                return RedirectToAction("index", "Home");
+            }
             return View();
-        }
+        } 
+
 
         public ActionResult About()
         {
