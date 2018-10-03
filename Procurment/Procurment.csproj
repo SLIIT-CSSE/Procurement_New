@@ -235,6 +235,30 @@
     <Compile Include="Migrations\201809261116290_OrderItem.Designer.cs">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Migrations\201810030733375_adddatevariable.cs" />
+    <Compile Include="Migrations\201810030733375_adddatevariable.Designer.cs">
+      <DependentUpon>201810030733375_adddatevariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030801408_addordersfk.cs" />
+    <Compile Include="Migrations\201810030801408_addordersfk.Designer.cs">
+      <DependentUpon>201810030801408_addordersfk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Company_Staff_Status.cs" />
+    <Compile Include="Models\ConstructionItem.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\SupplierStatus.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+
     <Compile Include="Migrations\201809270824286_addAutoIncrement.cs" />
     <Compile Include="Migrations\201809270824286_addAutoIncrement.Designer.cs">
       <DependentUpon>201809270824286_addAutoIncrement.cs</DependentUpon>
@@ -276,6 +300,7 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderItem.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\NewItemViewModel.cs" />
@@ -359,6 +384,7 @@
     <Content Include="App_Data\aspnet-Procurment-20180924054910_log.ldf">
       <DependentUpon>aspnet-Procurment-20180924054910.mdf</DependentUpon>
     </Content>
+
     <Content Include="Content\bootstrap-for-mvc.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -426,6 +452,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+
     <Content Include="Views\Payment\SuccessfullPayment.cshtml" />
     <Content Include="Views\Payment\PendingPayment.cshtml" />
     <Content Include="Views\Payment\ManagerApprovedList.cshtml" />
@@ -434,6 +461,7 @@
     <Content Include="Views\Payment\SuccessfullPaymentList.cshtml" />
     <Content Include="Views\AddOrder\AddMyOrder.cshtml" />
     <Content Include="Views\AddOrder\AddNewItem.cshtml" />
+
     <Content Include="Views\Dashboard\SiteManager.cshtml" />
     <Content Include="Views\ViewOrders\ApprovedOrder.cshtml" />
     <Content Include="Views\ViewOrders\ConsearchOrder.cshtml" />
@@ -446,8 +474,14 @@
     <Content Include="Views\ViewOrders\SupRejectedorder.cshtml" />
     <Content Include="Views\ViewOrders\ViewOrder.cshtml" />
 
+    <Content Include="Views\AddOrder\AddMyOrder.cshtml" />
+    <Content Include="Views\AddOrder\AddNewItem.cshtml" />
+    <Content Include="Views\Payment\SuccessfullPayment.cshtml" />
+
+
 
     <Content Include="Views\Dashboard\Supplier.cshtml" />
+
 
   </ItemGroup>
   <ItemGroup />
@@ -481,6 +515,13 @@
     <EmbeddedResource Include="Migrations\201809261116290_OrderItem.resx">
       <DependentUpon>201809261116290_OrderItem.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="Migrations\201810030733375_adddatevariable.resx">
+      <DependentUpon>201810030733375_adddatevariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030801408_addordersfk.resx">
+      <DependentUpon>201810030801408_addordersfk.cs</DependentUpon>
+
     <EmbeddedResource Include="Migrations\201809270824286_addAutoIncrement.resx">
       <DependentUpon>201809270824286_addAutoIncrement.cs</DependentUpon>
     </EmbeddedResource>
@@ -499,6 +540,7 @@
 
     <EmbeddedResource Include="Migrations\201810021227580_Date_Attribute_added_to_order.resx">
       <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
+
 
     </EmbeddedResource>
   </ItemGroup>

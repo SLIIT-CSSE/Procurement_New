@@ -17,6 +17,7 @@ namespace Procurment.Models
         public float SiteManagerId { get; set; }
         public DateTime Date { get; set; }
 
+       
 
     }
 }
