@@ -243,6 +243,10 @@
     <Compile Include="Migrations\201809270914080_Construction.Designer.cs">
       <DependentUpon>201809270914080_Construction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810021227580_Date_Attribute_added_to_order.cs" />
+    <Compile Include="Migrations\201810021227580_Date_Attribute_added_to_order.Designer.cs">
+      <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Company_Staff_Status.cs" />
@@ -425,7 +429,10 @@
     <Content Include="Views\ViewOrders\SupPreviousorder.cshtml" />
     <Content Include="Views\ViewOrders\SupRejectedorder.cshtml" />
     <Content Include="Views\ViewOrders\ViewOrder.cshtml" />
+
+
     <Content Include="Views\Dashboard\Supplier.cshtml" />
+
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -463,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809270914080_Construction.resx">
       <DependentUpon>201809270914080_Construction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810021227580_Date_Attribute_added_to_order.resx">
+      <DependentUpon>201810021227580_Date_Attribute_added_to_order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
