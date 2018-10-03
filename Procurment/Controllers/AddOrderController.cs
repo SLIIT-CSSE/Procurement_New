@@ -2,7 +2,8 @@
 using System.Data.Entity;
 using System.Web.Mvc;
 using System.Collections.Generic;
-
+using System.Linq;
+using Procurment.ViewModels;
 
 namespace Procurment.Controllers
 {
@@ -15,6 +16,11 @@ namespace Procurment.Controllers
             _context = new ApplicationDbContext();
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: AddOrder
         public ActionResult AddMyOrder()
         {
@@ -23,9 +29,15 @@ namespace Procurment.Controllers
 
         public ActionResult AddNewItem()
         {
-            var viewmodel = new ConstructionItem { };
-            return View(viewmodel);
+            var CategoryTypes = _context.Categories.ToList();
+            var viewModel = new NewItemViewModel
+            {
+                Categories = CategoryTypes
+            };
+            return View(viewModel);
         }
+
+        
 
         [HttpPost]
         public ActionResult create(ConstructionItem constructionitem)
@@ -34,5 +46,7 @@ namespace Procurment.Controllers
             _context.SaveChanges();
             return RedirectToAction("AddNewItem","AddOrder");
         }
+
+        
     }
 }
